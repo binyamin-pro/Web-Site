@@ -1,0 +1,90 @@
+﻿/*font: 
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+*/
+
+
+
+.box_full {
+    width: 100%;
+    background-image: url("images/1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    height: calc(100vw * (850/1920));
+    color: white;
+    box-sizing: border-box;
+    padding: 40px;
+
+    align-content: end;
+}
+    .box_full h2 {
+        color: white;
+        margin: 0;
+        font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 36px;
+    }
+    .box_full p {
+        color: white;
+        margin: 0;
+        margin-top: 10px;
+        font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 22px;
+    }
+
+
+
+.box_image {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    background-color: black;
+    padding: 10px;
+    gap: 20px;
+    align-items: flex-start;
+}
+    .box_image img {
+        flex: 1 1 50%;
+        max-width: 1000px;
+        height: auto;
+    }
+    .box_image .text_box {
+        flex: 1 1 50%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+        .box_image .text_box h2 {
+            color: white;
+            margin: 0;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 32px;
+        }
+        .box_image .text_box p {
+            color: white;
+            margin: 0;
+            margin-top: 10px;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 22px;
+        }
+
+
+.box_text_c {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+    .box_text_c p {
+        margin: 0;
+        margin-top: -10px;
+        font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 20px;
+    }
+    .box_text_c h2 {
+        font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 24px;
+    }
+

@@ -1,0 +1,99 @@
+﻿/*BUTTONS*/
+
+/*Logo*/
+.logo {
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+    margin: 5px;
+}
+
+/*Header*/
+.header_2 a {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease-in-out;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-weight: 500;
+    text-decoration: none;
+}
+    .header_2 a:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+    .header_2 a:active {
+        scale: 0.96;
+    }
+
+
+
+/**/
+
+/* Animed */
+.animated-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .animated-button:hover {
+        background: rgba(33, 150, 243, 0.35);
+        border-color: rgba(33, 150, 243, 0.6);
+        box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
+    }
+
+    .animated-button span:first-child {
+        position: relative;
+        z-index: 3;
+    }
+
+    .animated-button::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff40;
+        border-radius: 50%;
+        opacity: 0;
+        z-index: 2;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button:hover::after {
+        width: 100px;
+        height: 100px;
+        opacity: 0.15;
+    }
+
+    .animated-button:active {
+        transform: scale(0.97);
+    }
+
+
+
+
+
+
