@@ -58,9 +58,9 @@
     }
         .box_image .text_box h2 {
             color: white;
-            margin: 0;
             font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
             font-size: 32px;
+            margin: 0;
         }
         .box_image .text_box p {
             color: white;
