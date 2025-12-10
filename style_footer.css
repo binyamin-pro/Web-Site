@@ -100,7 +100,7 @@
         }
 
             .social .icons a:hover {
-                opacity: 0.8;
+                background: #00aaff;
             }
 
 footer .copyright {

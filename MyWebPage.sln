@@ -22,6 +22,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{BBF626
 	ProjectSection(SolutionItems) = preProject
 		images\1.jpg = images\1.jpg
 		images\1.mp4 = images\1.mp4
+		images\bday.jpg = images\bday.jpg
+		images\bday_old.jpg = images\bday_old.jpg
+		images\cyberpunk1.jpg = images\cyberpunk1.jpg
+		images\port2025.jpg = images\port2025.jpg
+		images\port2025_1.jpg = images\port2025_1.jpg
+		images\setup.jpg = images\setup.jpg
+		images\trip_night.jpg = images\trip_night.jpg
+		images\vertigo_k.jpg = images\vertigo_k.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "avatars", "avatars", "{844D1287-83C1-4AFE-8CCE-776803A6B575}"
+	ProjectSection(SolutionItems) = preProject
+		images\avatars\avatar1.gif = images\avatars\avatar1.gif
+		images\avatars\avatar2.jpg = images\avatars\avatar2.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{B1EE0D69-697F-45F7-B823-DC051607C3B8}"
+	ProjectSection(SolutionItems) = preProject
+		images\icons\book.svg = images\icons\book.svg
+		images\icons\brush.svg = images\icons\brush.svg
+		images\icons\building-castle.svg = images\icons\building-castle.svg
+		images\icons\bulb.svg = images\icons\bulb.svg
+		images\icons\camera.svg = images\icons\camera.svg
+		images\icons\flask.svg = images\icons\flask.svg
+		images\icons\mountain.svg = images\icons\mountain.svg
 	EndProjectSection
 EndProject
 Global
@@ -31,6 +56,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8} = {754FC069-D67B-A9D7-50A1-8D1CA196D8F1}
 		{BBF626F6-E7A4-45DB-AC62-0CFF6D43440E} = {754FC069-D67B-A9D7-50A1-8D1CA196D8F1}
+		{844D1287-83C1-4AFE-8CCE-776803A6B575} = {BBF626F6-E7A4-45DB-AC62-0CFF6D43440E}
+		{B1EE0D69-697F-45F7-B823-DC051607C3B8} = {BBF626F6-E7A4-45DB-AC62-0CFF6D43440E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF2D1EC0-D449-409F-94A8-BC9AC96B2202}
