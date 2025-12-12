@@ -24,12 +24,31 @@
             }
     </style>
 
+    <!-- Tutorial used to made this -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+
+                    btn.classList.add('active');
+                    document.getElementById(btn.dataset.tab).classList.add('active');
+                });
+            });
+        });
+    </script>
 
 </head>
 <body>
     <header class="header">
-        <!-- <img src="" alt="Failed to load img" /> -->
-        <a class="logo" href="index.html">Bunny Archive</a>
+        <div class="header_1">
+            <!--<img src="images/icons/heart2_1.png" alt="" /> because of designer reasons-->
+            <a class="logo" href="index.html">Bunny Archive</a>
+        </div>
 
         <nav class="header_2">
             <a class="header_item" href="index.html#home">Home</a>
@@ -46,7 +65,52 @@
     </header>
 
     <main>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="albums">Albums</button>
+            <button class="tab-btn" data-tab="music">Music</button>
+            <button class="tab-btn" data-tab="other">Other</button>
+        </div>
 
+
+        <!-- Albums -->
+        <div id="albums" class="tab-content active">
+            <div class="album-grid">
+                <a href="album-1.html" class="album">
+                    <img src="images/setup.jpg" alt="Album 1">
+                    <div class="album-title">Album 1</div>
+                </a>
+                <a href="album-2.html" class="album">
+                    <img src="images/trip_night.jpg" alt="Night">
+                    <div class="album-title">Night Time</div>
+                </a>
+                <a href="album-3.html" class="album">
+                    <img src="images/cyberpunk1.jpg" alt="Saved">
+                    <div class="album-title">Saved</div>
+                </a>
+                <a href="album-4.html" class="album">
+                    <img src="images/setup.jpg" alt="Tech">
+                    <div class="album-title">Tech & Games</div>
+                </a>
+                <a href="album-5.html" class="album">
+                    <img src="images/port2025_1.jpg" alt="Things">
+                    <div class="album-title">Things</div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Music -->
+        <div id="music" class="tab-content">
+            <h2>Music</h2>
+            <p>Your music list, tracks, playlist previews, etc.</p>
+        </div>
+
+
+        <!-- 3 -->
+        <div id="other" class="tab-content">
+            <h2>Other</h2>
+            <p>Extra category for whatever you want.</p>
+        </div>
 
     </main>
 
@@ -56,38 +120,38 @@
             <!--Left-->
             <div class="footer-left">
                 <div class="logo">
-                    <!--  <span class="logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-album"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M12 4v7l2 -2l2 2v-7" /></svg></span>  -->
+                    <!--<span class="logo-icon"><img src="images/icons/heart2_1.png" alt="" /></span> because of designer reasons-->
                     <span class="logo-text">Bunny`s Archive</span>
                 </div>
-            </div>
-            <!--Right-->
-            <div class="footer-right">
+    </div>
+    <!--Right-->
+                    <div class="footer-right">
 
-                <nav>
-                    <ul class="footer-nav">
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="extra.html">Extra</a></li>
-                        <li><a href="explore.html">Explore</a></li>
-                    </ul>
-                </nav>
+                        <nav>
+                            <ul class="footer-nav">
+                                <li><a href="index.html#home">Home</a></li>
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="extra.html">Extra</a></li>
+                                <li><a href="explore.html">Explore</a></li>
+                            </ul>
+                        </nav>
 
-                <div class="contact">
-                    <p><strong>Phone</strong> ### ### #### (Hidden)</p>
-                    <a href="https://mail.google.com/mail/u/0/?view=cm&to=lovilerspace@email.com"><strong>Email</strong> lovilerspace@gmail.com</a>
-                </div>
+                        <div class="contact">
+                            <p><strong>Phone</strong> ### ### #### (Hidden)</p>
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&to=lovilerspace@email.com"><strong>Email</strong> lovilerspace@gmail.com</a>
+                        </div>
 
-                <div class="social">
-                    <!--<strong>Follow Us:</strong>-->
-                    <!--Icons copied from https://tabler.io/icons-->
-                    <div class="icons">
-                        <a href="https://www.instagram.com/csf0rever/" data-text="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg></a>
-                        <a href="https://t.me/csf0rever" data-text="Telegram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg></a>
-                        <a href="https://mail.google.com/mail/u/0/?view=cm&to=lovilerspace@email.com" data-text="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg></a>
+                        <div class="social">
+                            <!--<strong>Follow Us:</strong>-->
+                            <!--Icons copied from https://tabler.io/icons-->
+                            <div class="icons">
+                                <a href="https://www.instagram.com/csf0rever/" data-text="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg></a>
+                                <a href="https://t.me/csf0rever" data-text="Telegram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg></a>
+                                <a href="https://mail.google.com/mail/u/0/?view=cm&to=lovilerspace@email.com" data-text="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
         <div class="copyright">©∞ by Vanny (Binyamin Hramtsov). Powering Imagination </div>
     </footer>
 </body>
