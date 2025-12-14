@@ -12,10 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решен
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "styles", "styles", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
 	ProjectSection(SolutionItems) = preProject
-		anim.css = anim.css
-		buttons.css = buttons.css
-		content.css = content.css
-		style_footer.css = style_footer.css
+		styles\anim.css = styles\anim.css
+		styles\buttons.css = styles\buttons.css
+		styles\content.css = styles\content.css
+		styles\style_footer.css = styles\style_footer.css
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{BBF626F6-E7A4-45DB-AC62-0CFF6D43440E}"
