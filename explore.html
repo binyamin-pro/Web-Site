@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles/content.css">
     <link rel="stylesheet" href="styles/anim.css">
 
+    <link rel="stylesheet" href="player/player.css">
+
     <style>
         html, body {
             margin: 0;
@@ -101,8 +103,42 @@
 
         <!-- Music -->
         <div id="music" class="tab-content">
-            <h2>Music</h2>
-            <p>text...</p>
+
+            <template id="player-template">
+                
+                <div class="cover">
+                    <img class="cover-img">
+                </div>
+
+                <div class="now-playing">
+                    <div class="track-title">Select a track</div>
+                    <div class="author-title">—</div>
+                </div>
+
+                <audio></audio>
+
+                <div class="timebar">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress" min="0" max="100" value="0">
+                    <span class="duration">0:00</span>
+                </div>
+                <div class="controls">
+
+                    <button class="prev">⏮</button>
+                    <button class="play">▶</button>
+                    <button class="next">⏭</button>
+                </div>
+
+                <ul class="playlist"></ul>
+            </template>
+
+            <div class="music-container">
+                <div class="audio-player" data-player="1"><h2>Title</h2></div>
+                <div class="audio-player" data-player="2"><h2>Title</h2></div>
+            </div>
+
+            <script src="player/player.js"></script>
+
         </div>
 
 

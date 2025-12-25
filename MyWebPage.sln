@@ -52,11 +52,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{B1EE0D69
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "albums", "albums", "{9289F2E7-0DD4-46E0-893C-9328A434B9F8}"
 	ProjectSection(SolutionItems) = preProject
-		album-1.html = album-1.html
-		album-2.html = album-2.html
-		album-3.html = album-3.html
-		album-4.html = album-4.html
-		album-5.html = album-5.html
+		albums\album-1.html = albums\album-1.html
+		albums\album-2.html = albums\album-2.html
+		albums\album-3.html = albums\album-3.html
+		albums\album-4.html = albums\album-4.html
+		albums\album-5.html = albums\album-5.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "player", "player", "{2C09F1BD-C474-417E-A655-E3A3BEE7458A}"
+	ProjectSection(SolutionItems) = preProject
+		player\player.js = player\player.js
+		player\player.css = player\player.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "audio", "audio", "{F2CFF8C6-C97E-41F2-84CA-D4F26AB6D3FE}"
+	ProjectSection(SolutionItems) = preProject
+		audio\ez4ence.jpg = audio\ez4ence.jpg
+		audio\Ooes - Права.mp3 = audio\Ooes - Права.mp3
+		audio\The Verkkars - EZ4ENCE.mp3 = audio\The Verkkars - EZ4ENCE.mp3
+		audio\Пошлая Молли - Контракт.mp3 = audio\Пошлая Молли - Контракт.mp3
 	EndProjectSection
 EndProject
 Global
@@ -69,6 +83,8 @@ Global
 		{844D1287-83C1-4AFE-8CCE-776803A6B575} = {BBF626F6-E7A4-45DB-AC62-0CFF6D43440E}
 		{B1EE0D69-697F-45F7-B823-DC051607C3B8} = {BBF626F6-E7A4-45DB-AC62-0CFF6D43440E}
 		{9289F2E7-0DD4-46E0-893C-9328A434B9F8} = {754FC069-D67B-A9D7-50A1-8D1CA196D8F1}
+		{2C09F1BD-C474-417E-A655-E3A3BEE7458A} = {754FC069-D67B-A9D7-50A1-8D1CA196D8F1}
+		{F2CFF8C6-C97E-41F2-84CA-D4F26AB6D3FE} = {754FC069-D67B-A9D7-50A1-8D1CA196D8F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF2D1EC0-D449-409F-94A8-BC9AC96B2202}
