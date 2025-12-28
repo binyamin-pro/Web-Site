@@ -147,7 +147,8 @@ html {
 
         .playlist li.active {
             background: #1f1f1f;
-            color: #4da3ff;
+            color: white;
+            font-weight: 500;
         }
 
 .timebar {
@@ -182,4 +183,39 @@ html {
         background: #fff;
         border-radius: 50%;
     }
+.gvolume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 20px auto;
+    margin-top: 0;
+    width: 200px;
+    color: #fff;
+}
 
+    .gvolume input[type="range"] {
+        width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 4px;
+        border-radius: 10px;
+        background: linear-gradient(to right, #fff 80%, #222 20%);
+        cursor: pointer;
+    }
+
+        .gvolume input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+
+    .gvolume .volume-t {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+    }

@@ -1,43 +1,72 @@
-﻿/* MP3 Player */
-/* Made with tutorials and determination xd */
+﻿/* MP3 Player - Multi Player with Default Covers */
 
 let currentlyPlayingAudio = null;
+let gVolume = 0.8;
 
 const playersData = {
-    1: [
-        {
-            title: "Права",
-            author: "Ooes",
-            src: "audio/Ooes - Права.mp3",
-            cover: "img/cover1.jpg"
-        },
-        {
-            title: "Контракт",
-            author: "Пошлая Молли",
-            src: "audio/Пошлая Молли - Контракт.mp3",
-            cover: "img/cover2.jpg"
-        }
-    ],
-    2: [
-        {
-            title: "EZ4ENCE",
-            author: "The Verkkars",
-            src: "audio/The Verkkars - EZ4ENCE.mp3",
-            cover: "img/cover3.jpg"
-        }
-    ]
+    1: {
+        defaultCover: "audio/default.png",
+        tracks: [
+            {
+                title: "Права",
+                author: "Ooes",
+                src: "audio/Ooes - Права.mp3",
+                cover: "audio/default.png"
+            },
+            {
+                title: "Контракт",
+                author: "Пошлая Молли",
+                src: "audio/Пошлая Молли - Контракт.mp3",
+                cover: "audio/default.png"
+            }
+        ]
+    },
+    2: {
+        defaultCover: "audio/default2.png",
+        tracks: [
+            {
+                title: "EZ4ENCE",
+                author: "The Verkkars",
+                src: "audio/The Verkkars - EZ4ENCE.mp3",
+                cover: "audio/default.png"
+            }
+        ]
+    }
 };
 
+/* ========== Global volume control ========== */
+const volumeSlider = document.getElementById("global-volume");
+if (volumeSlider) {
+    volumeSlider.value = gVolume * 100;
+
+    volumeSlider.oninput = () => {
+        gVolume = volumeSlider.value / 100;
+        document.querySelectorAll("audio").forEach(a => a.volume = gVolume);
+
+        volumeSlider.style.background = `
+            linear-gradient(
+                to right,
+                #fff ${volumeSlider.value}%,
+                #222 ${volumeSlider.value}%
+            )
+        `;
+    };
+}
+
+/* ========== Initialize players ========== */
 document.querySelectorAll(".audio-player").forEach(player => {
     const playerId = player.dataset.player;
-    const tracks = playersData[playerId];
-    if (!tracks) return;
+    const playerData = playersData[playerId];
+    if (!playerData) return;
 
-    /* template */
+    const tracks = playerData.tracks;
+    const defaultCover = playerData.defaultCover;
+
+    // Template
     const template = document.getElementById("player-template");
     player.append(template.content.cloneNode(true));
 
-    /* elements */
+    // Elements
     const audio = player.querySelector("audio");
     const playBtn = player.querySelector(".play");
     const prevBtn = player.querySelector(".prev");
@@ -52,8 +81,12 @@ document.querySelectorAll(".audio-player").forEach(player => {
     const durationEl = player.querySelector(".duration");
 
     let currentTrack = null;
-    let isPlaying = false;
+    audio._isPlaying = false; // track state
 
+    /* Set initial default cover */
+    coverImg.src = defaultCover;
+
+    /* Build playlist (text only, no cover images) */
     tracks.forEach((track, index) => {
         const li = document.createElement("li");
         li.innerHTML = `${track.title}<span>${track.author}</span>`;
@@ -61,7 +94,7 @@ document.querySelectorAll(".audio-player").forEach(player => {
         playlistEl.appendChild(li);
     });
 
-    /* time */
+    /* Format time helper */
     function formatTime(sec) {
         if (isNaN(sec)) return "0:00";
         const m = Math.floor(sec / 60);
@@ -69,53 +102,64 @@ document.querySelectorAll(".audio-player").forEach(player => {
         return `${m}:${s}`;
     }
 
+    /* Stop other players */
     function stopOtherPlayers() {
         if (currentlyPlayingAudio && currentlyPlayingAudio !== audio) {
             currentlyPlayingAudio.pause();
-            currentlyPlayingAudio.currentTime = 0;
+            currentlyPlayingAudio._isPlaying = false;
 
-            const other = currentlyPlayingAudio.closest(".audio-player");
-            if (other) {
-                const btn = other.querySelector(".play");
+            const otherPlayer = currentlyPlayingAudio.closest(".audio-player");
+            if (otherPlayer) {
+                const btn = otherPlayer.querySelector(".play");
                 if (btn) btn.textContent = "▶";
+                const mainCover = otherPlayer.querySelector(".cover-img");
+                if (mainCover) mainCover.src = playersData[otherPlayer.dataset.player].defaultCover;
             }
         }
         currentlyPlayingAudio = audio;
     }
 
+    /* Click track */
     function onTrackClick(index) {
         if (currentTrack === index) {
-            if (isPlaying) {
+            if (audio._isPlaying) {
                 audio.pause();
-                isPlaying = false;
+                audio._isPlaying = false;
                 playBtn.textContent = "▶";
+                coverImg.src = defaultCover; // default cover when paused
             } else {
                 stopOtherPlayers();
                 audio.play();
-                isPlaying = true;
+                audio._isPlaying = true;
                 playBtn.textContent = "⏸";
+                coverImg.src = tracks[index].cover; // track cover
             }
             return;
         }
-
         load(index, true);
     }
 
-    /* loading */
+    /* Load track */
     function load(index, autoplay = false) {
         currentTrack = index;
         const track = tracks[index];
 
         audio.src = track.src;
-        audio.currentTime = 0;
         audio.load();
+        audio.currentTime = 0;
+        audio.volume = gVolume;
 
         titleEl.textContent = track.title;
         authorEl.textContent = track.author;
+
+        // Main cover
         coverImg.src = track.cover;
 
-        [...playlistEl.children].forEach(li => li.classList.remove("active"));
-        playlistEl.children[index].classList.add("active");
+        // Update playlist active class
+        [...playlistEl.children].forEach((li, i) => {
+            li.classList.remove("active");
+            if (i === index) li.classList.add("active");
+        });
 
         progress.value = 0;
         currentTimeEl.textContent = "0:00";
@@ -124,31 +168,35 @@ document.querySelectorAll(".audio-player").forEach(player => {
         if (autoplay) {
             stopOtherPlayers();
             audio.play();
-            isPlaying = true;
+            audio._isPlaying = true;
             playBtn.textContent = "⏸";
         }
     }
 
-    /* play pause */
+    /* Play / pause button */
     playBtn.onclick = () => {
         if (currentTrack === null) {
             load(0, true);
             return;
         }
 
-        if (isPlaying) {
+        if (audio._isPlaying) {
             audio.pause();
+            audio._isPlaying = false;
             playBtn.textContent = "▶";
-            isPlaying = false;
+            coverImg.src = defaultCover; // default cover when paused
         } else {
             stopOtherPlayers();
             audio.play();
+            audio._isPlaying = true;
             playBtn.textContent = "⏸";
-            isPlaying = true;
+            coverImg.src = tracks[currentTrack].cover;
         }
+
+        audio.volume = gVolume;
     };
 
-    /* prev next */
+    /* Prev / next */
     prevBtn.onclick = () => {
         if (currentTrack === null) return;
         load((currentTrack - 1 + tracks.length) % tracks.length, true);
@@ -159,6 +207,7 @@ document.querySelectorAll(".audio-player").forEach(player => {
         load((currentTrack + 1) % tracks.length, true);
     };
 
+    /* Time updates */
     audio.onloadedmetadata = () => {
         durationEl.textContent = formatTime(audio.duration);
     };
@@ -171,22 +220,23 @@ document.querySelectorAll(".audio-player").forEach(player => {
         currentTimeEl.textContent = formatTime(audio.currentTime);
 
         progress.style.background = `
-        linear-gradient(
-            to right,
-            #c4c4c4 0%,
-            #c4c4c4 ${percent}%,
-            #222 ${percent}%,
-            #222 100%
-        )
-    `;
+            linear-gradient(
+                to right,
+                #c4c4c4 0%,
+                #c4c4c4 ${percent}%,
+                #222 ${percent}%,
+                #222 100%
+            )
+        `;
     };
-    /* Its 12 still i got it to work, goodnight xd */
 
+    /* Seek bar */
     progress.oninput = () => {
         if (!audio.duration) return;
         audio.currentTime = (progress.value / 100) * audio.duration;
     };
 
+    /* Auto next track */
     audio.onended = () => {
         load((currentTrack + 1) % tracks.length, true);
     };
