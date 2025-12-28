@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\explore.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|solutionrelative:explore.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C09F1BD-C474-417E-A655-E3A3BEE7458A}|player{2C09F1BD-C474-417E-A655-E3A3BEE7458A}|G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\player\\player.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2C09F1BD-C474-417E-A655-E3A3BEE7458A}|player{2C09F1BD-C474-417E-A655-E3A3BEE7458A}|solutionrelative:player\\player.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\extra.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|solutionrelative:extra.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C09F1BD-C474-417E-A655-E3A3BEE7458A}|player{2C09F1BD-C474-417E-A655-E3A3BEE7458A}|G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\player\\player.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{2C09F1BD-C474-417E-A655-E3A3BEE7458A}|player{2C09F1BD-C474-417E-A655-E3A3BEE7458A}|solutionrelative:player\\player.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}|styles{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}|G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\styles\\content.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}|styles{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}|solutionrelative:styles\\content.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "content.css",
+              "DocumentMoniker": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\styles\\content.css",
+              "RelativeDocumentMoniker": "styles\\content.css",
+              "ToolTip": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\styles\\content.css",
+              "RelativeToolTip": "styles\\content.css",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAHQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-25T20:05:26.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "player.css",
+              "DocumentMoniker": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\player\\player.css",
+              "RelativeDocumentMoniker": "player\\player.css",
+              "ToolTip": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\player\\player.css",
+              "RelativeToolTip": "player\\player.css",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAAAL8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-14T20:52:12.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "player.js",
+              "DocumentMoniker": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\player\\player.js",
+              "RelativeDocumentMoniker": "player\\player.js",
+              "ToolTip": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\player\\player.js",
+              "RelativeToolTip": "player\\player.js",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAUwPIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-14T20:41:00.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "index.html",
+              "DocumentMoniker": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-24T17:00:13.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "extra.html",
+              "DocumentMoniker": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\extra.html",
+              "RelativeDocumentMoniker": "extra.html",
+              "ToolTip": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\extra.html",
+              "RelativeToolTip": "extra.html",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAuwLwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-02T19:59:52.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "explore.html",
+              "DocumentMoniker": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\explore.html",
+              "RelativeDocumentMoniker": "explore.html",
+              "ToolTip": "G:\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\Visual Studio Projects\\MyWebPage\\explore.html",
+              "RelativeToolTip": "explore.html",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAIcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-29T10:50:41.379Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

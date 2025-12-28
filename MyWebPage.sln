@@ -61,12 +61,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "albums", "albums", "{9289F2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "player", "player", "{2C09F1BD-C474-417E-A655-E3A3BEE7458A}"
 	ProjectSection(SolutionItems) = preProject
-		player\player.js = player\player.js
 		player\player.css = player\player.css
+		player\player.js = player\player.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "audio", "audio", "{F2CFF8C6-C97E-41F2-84CA-D4F26AB6D3FE}"
 	ProjectSection(SolutionItems) = preProject
+		audio\default.png = audio\default.png
+		audio\default1.png = audio\default1.png
+		audio\default2.png = audio\default2.png
 		audio\ez4ence.jpg = audio\ez4ence.jpg
 		audio\Ooes - Права.mp3 = audio\Ooes - Права.mp3
 		audio\The Verkkars - EZ4ENCE.mp3 = audio\The Verkkars - EZ4ENCE.mp3
