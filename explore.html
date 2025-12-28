@@ -105,7 +105,7 @@
         <div id="music" class="tab-content">
 
             <template id="player-template">
-
+                
                 <div class="cover">
                     <img class="cover-img">
                 </div>
@@ -114,6 +114,7 @@
                     <div class="track-title">Select a track</div>
                     <div class="author-title">—</div>
                 </div>
+
                 <audio></audio>
 
                 <div class="timebar">
@@ -121,7 +122,6 @@
                     <input type="range" class="progress" min="0" max="100" value="0">
                     <span class="duration">0:00</span>
                 </div>
-
                 <div class="controls">
 
                     <button class="prev">⏮</button>
@@ -132,13 +132,8 @@
                 <ul class="playlist"></ul>
             </template>
 
-            <div class="gvolume">
-                <span class="volume-t">Volume</span>
-                <input type="range" id="global-volume" min="0" max="100" value="80">
-            </div>
-
             <div class="music-container">
-                <div class="audio-player" data-player="1"><h2>Atmosphere</h2></div>
+                <div class="audio-player" data-player="1"><h2>Title</h2></div>
                 <div class="audio-player" data-player="2"><h2>Title</h2></div>
             </div>
 
