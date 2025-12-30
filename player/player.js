@@ -1,7 +1,8 @@
-﻿/* MP3 Player - Multi Player with Default Covers */
+﻿/* MP3 Player */
+/* Made with tutorials and determination XD */
 
 let currentlyPlayingAudio = null;
-let gVolume = 0.8;
+let gVolume = 0.4;
 
 const playersData = {
     1: {
@@ -11,7 +12,7 @@ const playersData = {
                 title: "Права",
                 author: "Ooes",
                 src: "audio/Ooes - Права.mp3",
-                cover: "audio/default.png"
+                cover: "audio/ooes.jpg"
             },
             {
                 title: "Контракт",
@@ -28,13 +29,13 @@ const playersData = {
                 title: "EZ4ENCE",
                 author: "The Verkkars",
                 src: "audio/The Verkkars - EZ4ENCE.mp3",
-                cover: "audio/default.png"
+                cover: "audio/ez4ence.jpg"
             }
         ]
     }
 };
 
-/* ========== Global volume control ========== */
+/* Global volume */
 const volumeSlider = document.getElementById("global-volume");
 if (volumeSlider) {
     volumeSlider.value = gVolume * 100;
@@ -53,7 +54,7 @@ if (volumeSlider) {
     };
 }
 
-/* ========== Initialize players ========== */
+/* Players */
 document.querySelectorAll(".audio-player").forEach(player => {
     const playerId = player.dataset.player;
     const playerData = playersData[playerId];
@@ -62,7 +63,6 @@ document.querySelectorAll(".audio-player").forEach(player => {
     const tracks = playerData.tracks;
     const defaultCover = playerData.defaultCover;
 
-    // Template
     const template = document.getElementById("player-template");
     player.append(template.content.cloneNode(true));
 
@@ -81,12 +81,10 @@ document.querySelectorAll(".audio-player").forEach(player => {
     const durationEl = player.querySelector(".duration");
 
     let currentTrack = null;
-    audio._isPlaying = false; // track state
+    audio._isPlaying = false;
 
-    /* Set initial default cover */
     coverImg.src = defaultCover;
 
-    /* Build playlist (text only, no cover images) */
     tracks.forEach((track, index) => {
         const li = document.createElement("li");
         li.innerHTML = `${track.title}<span>${track.author}</span>`;
@@ -94,7 +92,6 @@ document.querySelectorAll(".audio-player").forEach(player => {
         playlistEl.appendChild(li);
     });
 
-    /* Format time helper */
     function formatTime(sec) {
         if (isNaN(sec)) return "0:00";
         const m = Math.floor(sec / 60);
@@ -102,7 +99,6 @@ document.querySelectorAll(".audio-player").forEach(player => {
         return `${m}:${s}`;
     }
 
-    /* Stop other players */
     function stopOtherPlayers() {
         if (currentlyPlayingAudio && currentlyPlayingAudio !== audio) {
             currentlyPlayingAudio.pause();
@@ -119,27 +115,25 @@ document.querySelectorAll(".audio-player").forEach(player => {
         currentlyPlayingAudio = audio;
     }
 
-    /* Click track */
     function onTrackClick(index) {
         if (currentTrack === index) {
             if (audio._isPlaying) {
                 audio.pause();
                 audio._isPlaying = false;
                 playBtn.textContent = "▶";
-                coverImg.src = defaultCover; // default cover when paused
+                coverImg.src = defaultCover;
             } else {
                 stopOtherPlayers();
                 audio.play();
                 audio._isPlaying = true;
                 playBtn.textContent = "⏸";
-                coverImg.src = tracks[index].cover; // track cover
+                coverImg.src = tracks[index].cover;
             }
             return;
         }
         load(index, true);
     }
 
-    /* Load track */
     function load(index, autoplay = false) {
         currentTrack = index;
         const track = tracks[index];
@@ -152,10 +146,8 @@ document.querySelectorAll(".audio-player").forEach(player => {
         titleEl.textContent = track.title;
         authorEl.textContent = track.author;
 
-        // Main cover
         coverImg.src = track.cover;
 
-        // Update playlist active class
         [...playlistEl.children].forEach((li, i) => {
             li.classList.remove("active");
             if (i === index) li.classList.add("active");
@@ -173,7 +165,7 @@ document.querySelectorAll(".audio-player").forEach(player => {
         }
     }
 
-    /* Play / pause button */
+    /* play pause */
     playBtn.onclick = () => {
         if (currentTrack === null) {
             load(0, true);
@@ -184,7 +176,7 @@ document.querySelectorAll(".audio-player").forEach(player => {
             audio.pause();
             audio._isPlaying = false;
             playBtn.textContent = "▶";
-            coverImg.src = defaultCover; // default cover when paused
+            coverImg.src = defaultCover;
         } else {
             stopOtherPlayers();
             audio.play();
@@ -196,7 +188,7 @@ document.querySelectorAll(".audio-player").forEach(player => {
         audio.volume = gVolume;
     };
 
-    /* Prev / next */
+    /* prev  next */
     prevBtn.onclick = () => {
         if (currentTrack === null) return;
         load((currentTrack - 1 + tracks.length) % tracks.length, true);
@@ -207,7 +199,6 @@ document.querySelectorAll(".audio-player").forEach(player => {
         load((currentTrack + 1) % tracks.length, true);
     };
 
-    /* Time updates */
     audio.onloadedmetadata = () => {
         durationEl.textContent = formatTime(audio.duration);
     };
@@ -230,13 +221,11 @@ document.querySelectorAll(".audio-player").forEach(player => {
         `;
     };
 
-    /* Seek bar */
     progress.oninput = () => {
         if (!audio.duration) return;
         audio.currentTime = (progress.value / 100) * audio.duration;
     };
 
-    /* Auto next track */
     audio.onended = () => {
         load((currentTrack + 1) % tracks.length, true);
     };
