@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My Web</title>
+
+    <!--styles-->
+    <link rel="stylesheet" href="styles/style_footer.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/anim.css">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: black;
+        }
+
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0px auto 60px auto;
+            padding: 20px;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+            .contact-container h1 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                background-color: #1a1a1a;
+                color: white;
+            }
+
+            .form-group textarea {
+                resize: none;
+                height: 120px;
+            }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: linear-gradient(45deg, #ff4d6d, #c000ee);
+            color: white;
+            font-size: 16px;
+        }
+
+            .submit-btn:hover {
+                opacity: 0.85;
+            }
+
+        .social-buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+            .social-buttons a {
+                padding: 10px 15px;
+                border-radius: 8px;
+                text-decoration: none;
+                color: white;
+                background: #222;
+                transition: 0.2s;
+            }
+
+                .social-buttons a:hover {
+                    background: #444;
+                }
+
+        .error-text {
+            color: red;
+            height: 20px;
+            line-height: 20px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_1">
+            <img src="images/icons/heart2_1.png" alt="" />
+            <a class="logo" href="index.html">Bunny Archive</a>
+        </div>
+
+        <nav class="header_2">
+            <a class="header_item" href="index.html#home">Home</a>
+            <a class="header_item" href="index.html#about">About</a>
+            <a class="header_item" href="extra.html">Extra</a>
+            <!-- <a class="header_item" href="contact.html">Contact</a> -->
+
+            <a class="animated-button particles-overlay" href="explore.html">
+                <span>Explore</span>
+
+                <div class="particles"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            </a>
+
+        </nav>
+    </header>
+
+
+    <div class="social-buttons">
+        <a href="https://instagram.com/csf0rever">Instagram</a>
+        <!-- <a href="https://youtube.com">YouTube</a> -->
+        <a href="https://tiktok.com/csf0rever">TikTok</a>
+        <a href="https://steamcommunity.com/id/csf0rever">Steam</a>
+        <a href="https://t.me/csf0rever/">Telegram</a>
+    </div>
+
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" id="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+            <p id="errorText" class="error-text"></p>
+        </form>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!--Left-->
+            <div class="footer-left">
+                <div class="logo">
+                    <span class="logo-icon"><img src="images/icons/heart2_1.png" alt="" /></span>
+                    <span class="logo-text">Bunny`s Archive</span>
+                </div>
+                <a href="contact.html">Contact</a>
+            </div>
+            <!--Right-->
+            <div class="footer-right">
+                    
+                <nav>
+                    <ul class="footer-nav">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="extra.html">Extra</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                    </ul>
+                </nav>
+
+                <div class="contact">
+                    <p><strong>Phone</strong> 054 321 0001</p>
+                    <a target="_parent" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/?view=cm&to=lovilerspace@email.com"><strong>Email</strong> lovilerspace@gmail.com</a>
+                </div>
+
+                <div class="social">
+                    <!--<strong>Follow Us:</strong>-->
+                    <!--Icons copied from https://tabler.io/icons-->
+                    <div class="icons">
+                        <a target="_parent" rel="noopener noreferrer" href="https://www.instagram.com/csf0rever/" data-text="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg></a>
+                        <a target="_parent" rel="noopener noreferrer" href="https://t.me/csf0rever" data-text="Telegram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg></a>
+                        <a target="_parent" rel="noopener noreferrer" href="https://mail.google.com/mail/u/0/?view=cm&to=lovilerspace@email.com" data-text="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">©∞ by Vanny (Binyamin Hramtsov). Powering Imagination </div>
+    </footer>
+
+    <script src="contact/client.js"></script>
+
+</body>
+</html>
