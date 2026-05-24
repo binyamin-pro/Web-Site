@@ -15,10 +15,40 @@ const playersData = {
                 cover: "audio/ooes.jpg"
             },
             {
-                title: "Контракт",
-                author: "Пошлая Молли",
-                src: "audio/Пошлая Молли - Контракт.mp3",
-                cover: "audio/default.png"
+                title: "Psycho Dreams",
+                author: "Kill Eva",
+                src: "audio/Psycho Dreams - Kill Eva.mp3",
+                cover: "audio/kukuruza.png"
+            },
+            {
+                title: "Лазить По Стенам",
+                author: "Zhanulka",
+                src: "audio/Po stenam - zhanulka.mp3",
+                cover: "audio/kira.png"
+            },
+            {
+                title: "Наколки",
+                author: "Zhanulka",
+                src: "audio/Nakolki - zhanulka.mp3",
+                cover: "audio/kira.png"
+            },
+            {
+                title: "Хризантеми",
+                author: "Анастимоза",
+                src: "audio/Hrizantemi - Anastimoza.mp3",
+                cover: "audio/hrizantemi.jpg"
+            },
+            {
+                title: "I Really Want to Stay At Your House",
+                author: "Rosa Walton",
+                src: "audio/I Really Want to Stay At Your House - Cyberpunk.mp3",
+                cover: "audio/mc-cp.png"
+            },
+            {
+                title: "Major Crimes",
+                author: "Health",
+                src: "audio/Major Crimes - Cyberpunk.mp3",
+                cover: "audio/mc-cp.png"
             }
         ]
     },

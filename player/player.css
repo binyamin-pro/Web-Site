@@ -16,6 +16,7 @@ html {
     font-size: 20px;
     font-weight: 500;
     margin: 0px;
+    margin-bottom: 10px;
 }
 
 .playlist-title {
@@ -34,7 +35,7 @@ html {
     padding: 14px;
     color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    height: 500px;
+    height: 530px;
 }
 
 .cover {
